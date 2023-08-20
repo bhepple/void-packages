@@ -1,0 +1,15 @@
+# Template file for 'wlr-sunclock'
+pkgname=wlr-sunclock
+version=1.0.0
+revision=1
+build_style=meson
+hostmakedepends="pkg-config"
+makedepends="wayland-devel wayland-protocols librsvg-devel gtk-layer-shell-devel"
+depends="units"
+short_desc="Show the sun's shadows on earth"
+maintainer="Bob Hepple <bob.hepple@gmail.com>"
+# src/astro.[ch] are by John Walker in 1988 and placed in the Public Domain.
+license="LGPL-3.0-only and Public Domain"
+homepage="https://github.com/sentriz/wlr-sunclock"
+distfiles="https://github.com/sentriz/wlr-sunclock/archive/v${version}/wlr-sunclock-${version}.tar.gz"
+checksum=c6383d22f19d4f821b2d0c03fdb2f374a0d8b86faee08643cfa9af0e5c275714
