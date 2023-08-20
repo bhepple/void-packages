@@ -1,0 +1,17 @@
+# Template file for 'gtklock-runshell-module'
+pkgname=gtklock-runshell-module
+version=1.0.0
+revision=1
+build_style=gnu-makefile
+hostmakedepends="pkg-config"
+makedepends="gtk+3-devel gtk-layer-shell-devel wayland-devel glib-devel"
+short_desc="gtklock module to add output from a script to the lockscreen."
+maintainer="Bob Hepple <bob.hepple@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://gitlab.com/wef/gtklock-runshell-module"
+distfiles="https://gitlab.com/wef/gtklock-runshell-module/-/archive/${version}/gtklock-runshell-module-${version}.tar.gz"
+checksum=51834aa3d475c7e9048c8092f41a0d649d10785cb5df0196082a2dc2e8ac15e3
+
+do_build() {
+	make
+}
