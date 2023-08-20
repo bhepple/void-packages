@@ -1,0 +1,14 @@
+# Template file for 'nwg-wrapper'
+pkgname=nwg-wrapper
+version=0.1.3
+revision=1
+build_style=python3-module
+hostmakedepends="python3-setuptools"
+makedepends="python3-devel "
+depends="gtk-layer-shell python3-gobject python3-i3ipc"
+short_desc="A GTK3 wrapper to display text on the desktop for wlroots"
+maintainer="Bob Hepple <bob.hepple@gmail.com>"
+license="MIT"
+homepage="https://github.com/nwg-piotr/nwg-wrapper"
+distfiles="https://github.com/nwg-piotr/nwg-wrapper/archive/v${version}/nwg-wrapper-${version}.tar.gz"
+checksum=7d14b53bde012eed5de9d0480b31179466f473daf87202a0245a652eefba3812
