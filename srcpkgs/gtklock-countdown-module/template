@@ -1,0 +1,18 @@
+# Template file for 'gtklock-countdown-module'
+pkgname=gtklock-countdown-module
+version=1.0.0
+revision=1
+build_style=gnu-makefile
+#make_use_env=yes
+hostmakedepends="pkg-config"
+makedepends="gtk+3-devel gtk-layer-shell-devel wayland-devel glib-devel"
+short_desc="gtklock module to do a countdown on a lock-screen"
+maintainer="Bob Hepple <bob.hepple@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://gitlab.com/wef/gtklock-countdown-module"
+distfiles="https://gitlab.com/wef/gtklock-countdown-module/-/archive/${version}/gtklock-countdown-module-${version}.tar.gz"
+checksum=a3f1068aa85baa3245a4f8a2f27fd0b6117c95a746ccc01346b4d06c82961913
+
+do_build() {
+	make
+}
