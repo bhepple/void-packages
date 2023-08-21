@@ -1,0 +1,17 @@
+# Template file for 'gtklock-playerctl-module'
+pkgname=gtklock-playerctl-module
+version=2.0.1
+revision=1
+build_style=gnu-makefile
+hostmakedepends="pkg-config"
+makedepends="gtk+3-devel playerctl-devel libsoup-devel"
+short_desc="Adds a mpris media player controller to the lockscreen"
+maintainer="Bob Hepple <bob.hepple@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/jovanlanik/gtklock-playerctl-module"
+distfiles="https://github.com/jovanlanik/gtklock-playerctl-module/archive/refs/tags/v${version}.tar.gz"
+checksum=141feffcec07640e997a2fc74097d58b18cdfc449a78c07691c305a9850115f0
+
+do_build() {
+	make
+}
