@@ -1,0 +1,17 @@
+# Template file for 'gtklock-userinfo-module'
+pkgname=gtklock-userinfo-module
+version=2.1.0
+revision=1
+build_style=gnu-makefile
+hostmakedepends="pkg-config"
+makedepends="gtk+3-devel accountsservice-devel"
+short_desc="Adds a user image and user name to the lockscreen"
+maintainer="Bob Hepple <bob.hepple@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/jovanlanik/gtklock-userinfo-module"
+distfiles="https://github.com/jovanlanik/gtklock-userinfo-module/archive/refs/tags/v${version}.tar.gz"
+checksum=046436e5229db1bd888a6b3bee5981ad44e065fb76206ac0d263fdfca006a5a4
+
+do_build() {
+	make
+}
