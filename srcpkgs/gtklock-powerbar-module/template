@@ -1,0 +1,17 @@
+# Template file for 'gtklock-powerbar-module'
+pkgname=gtklock-powerbar-module
+version=2.0.1
+revision=1
+build_style=gnu-makefile
+hostmakedepends="pkg-config"
+makedepends="gtk+3-devel"
+short_desc="gtklock module adding power controls to the lockscreen"
+maintainer="Bob Hepple <bob.hepple@gmail.com>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/jovanlanik/gtklock-powerbar-module"
+distfiles="https://github.com/jovanlanik/gtklock-powerbar-module/archive/refs/tags/v${version}.tar.gz"
+checksum=61e80400c95235e0a9fe2e3f1db8ec63de4678c265e5e27b22661d789f2ff2ca
+
+do_build() {
+	make
+}
