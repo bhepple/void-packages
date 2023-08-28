@@ -1,0 +1,40 @@
+pkgname=hdhomerun
+version=20200907
+revision=1
+build_style=gnu-makefile
+hostmakedepends="gcc make"
+makedepends=""
+short_desc="Silicon Dust HDHomeRun configuration utility"
+maintainer="Bob Hepple <bob.hepple@gmail.com>"
+license="GPL-2.0-only"
+homepage="http://www.silicondust.com"
+distfiles="http://download.silicondust.com/hdhomerun/libhdhomerun_${version}.tgz"
+checksum=cbaeb779c5a4e07db45310ef4271872bcb7c472402ebc3c58e224653c09400ed
+
+post_extract() {
+	sed -i 's/\r//' *
+	sed -i -e '/$(STRIP).*/d' -e 's/C\(PP\)\?FLAGS .=/C\1FLAGS ?=/' Makefile
+	for f in *; do
+		/usr/bin/iconv -f iso-8859-1 -t utf-8 --output $f.new $f && mv $f.new $f
+	done
+}
+
+do_build() {
+	make
+}
+
+do_install() {
+	vmkdir /usr/lib
+	vbin hdhomerun_config
+	vlicense LICENSE
+	vdoc README.md
+}
+
+hdhomerun-devel_package() {
+	short_desc+=" - development files"
+	depends="${sourcepkg}>=${version}_${revision}"
+	pkg_install() {
+		vinstall libhdhomerun.so 644 "usr/lib"
+		vinstall hdhomerun.h 644 "usr/include"
+	}
+}
