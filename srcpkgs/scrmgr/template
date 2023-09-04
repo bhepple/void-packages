@@ -1,0 +1,16 @@
+pkgname=scrmgr
+version=3.0
+revision=1
+build_style=gnu-configure
+hostmakedepends="autoconf automake libtool pkg-config"
+makedepends="ncurses-devel"
+short_desc="Not quite dBase III for linux (from 1992)"
+maintainer="Bob Hepple <bob.hepple@gmail.com>"
+license="GPL-2.0-only"
+homepage="https://gitlab.com/wef/scrmgr"
+distfiles="https://gitlab.com/wef/scrmgr/-/archive/${version}/scrmgr-${version}.tar.gz"
+checksum=2a656cfc1fe7d8835d4f4037fa4b0d0122830ab5e56e67f07a7024eaf2432a85
+
+pre_configure() {
+        ./autogen.sh
+}
