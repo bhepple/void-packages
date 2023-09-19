@@ -1,5 +1,5 @@
 pkgname=hdhomerun
-version=20200907
+version=20230323
 revision=1
 build_style=gnu-makefile
 hostmakedepends="gcc make"
@@ -9,7 +9,7 @@ maintainer="Bob Hepple <bob.hepple@gmail.com>"
 license="GPL-2.0-only"
 homepage="http://www.silicondust.com"
 distfiles="http://download.silicondust.com/hdhomerun/libhdhomerun_${version}.tgz"
-checksum=cbaeb779c5a4e07db45310ef4271872bcb7c472402ebc3c58e224653c09400ed
+checksum=4f599c4f774c7accfc78fe07a2d492f2352c7b5ed9aa03f39b74f39c937b96e6
 
 post_extract() {
 	sed -i 's/\r//' *
