@@ -35,6 +35,8 @@ hdhomerun-devel_package() {
 	depends="${sourcepkg}>=${version}_${revision}"
 	pkg_install() {
 		vinstall libhdhomerun.so 644 "usr/lib"
-		vinstall hdhomerun.h 644 "usr/include"
+                for i in hdhomerun*.h; do
+		    vinstall $i 644 "usr/include"
+                done
 	}
 }
